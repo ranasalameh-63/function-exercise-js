@@ -1,10 +1,11 @@
 //Q1
-function reverseNumber(x) {
-    let reversed = x.toString().split('').reverse().join('');
-    return parseInt(reversed);
+let number = 532443;
+let array = [];
+let number2 = number.toString();
+for(let i = number2.length -1 ; i>=0 ; i--){
+array.push(number2[i]);
 }
-let x = 532443;
-console.log(reverseNumber(x));  // Output: 344235
+console.log(array.join(''));
 
 ///////////
 //Q2
@@ -18,7 +19,25 @@ for (let i = 0; i <= 15; i++) {
 
   //////////////
   //Q3
-  
+  let str = "orange";
+let asciiCodes = [];
+let result = '';
+for (let i = 0; i < str.length; i++) {
+    asciiCodes.push(str.charCodeAt(i));
+}
+function bubbleSort(arr) {
+    let n = arr.length;
+    for (let i = 0; i < n - 1; i++) {
+        for (let j = 0; j < n - 1 - i; j++) {
+            if (arr[j] > arr[j + 1]) {
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    return arr;
+}
 
 
   ////////////
